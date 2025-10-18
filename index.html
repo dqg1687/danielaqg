@@ -2,49 +2,186 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://use.typekit.net/ygl4jfm.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="portfolio" />
-    <meta
-      name="keywords"
-      content="etz,etz,etz3,etz4,etz5,etz6,etz7,etz8,etz9,etz10"
-    />
-    <meta name="author" content="Daniela QG" />
-    <link rel="stylesheet" href="css/style.css" />
-   
-    <title>Daniela Q portfolio</title>
+    <title>Serene Banner</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "tangier", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .banner {
+        width: 90%;
+        max-width: 1200px;
+        height: 120px;
+        background: linear-gradient(135deg, #fdb6c7 0%, #aed7e3 100%);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        overflow: hidden;
+      }
+
+      .banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="waves" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M0,50 C20,40 40,60 60,50 S80,40 100,50 V100 H0 Z" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23waves)"/></svg>');
+        opacity: 0.6;
+      }
+
+      .serene-text {
+        font-size: 5rem;
+        font-weight: 300;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        letter-spacing: 4px;
+        z-index: 2;
+      }
+
+      .menu-container {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        display: flex;
+        gap: 15px;
+        z-index: 3;
+      }
+
+      .menu-item {
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 6px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        color: #667eea;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+      }
+
+      .menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.95);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .content {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+        color: #555;
+      }
+
+      h2 {
+        color: #667eea;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .banner {
+          height: 200px;
+        }
+
+        .serene-text {
+          font-size: 3rem;
+        }
+
+        .menu-container {
+          top: 15px;
+          right: 15px;
+          gap: 10px;
+        }
+
+        .menu-item {
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .banner {
+          height: 150px;
+        }
+
+        .serene-text {
+          font-size: 2rem;
+          letter-spacing: 2px;
+        }
+
+        .menu-container {
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    </style>
   </head>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="work/index.html">work</a></li>
-      
-      <li><a href="about_me/index.html">about me</a></li>
-      <li><a href="contact_me/contact.php">contact me</a></li>
-     <li><a href="gib/done/eindopdracht/home/index.html">gip</a></li>
-    </ul>
-  </nav>
   <body>
-   
-    <h2></h2>
-    <div class="flex-container">
-      <div>
-        <h1 class="center">Daniela QG</h1>
-       <h2>student crossmedia</h2>
+    <div class="banner">
+      <div class="serene-text">Serene</div>
+      <div class="menu-container">
+        <div class="menu-item">Menu 1</div>
+        <div class="menu-item">Menu 2</div>
+        <div class="menu-item">Menu 3</div>
       </div>
-    <img
-      id="monogram"
-      src="images/monogram_daniela.svg"
-      alt="monogram_daniela">
-      </div>
+    </div>
 
+    <div class="content">
+      <h2>About This Design</h2>
+      <p>
+        This banner features a beautiful gradient background with the word
+        "Serene" centered in elegant typography. The menu items are positioned
+        against the banner in the top-right corner, creating a clean and modern
+        design.
+      </p>
+      <p>
+        The menu items have a subtle glassmorphism effect and respond to hover
+        interactions, providing visual feedback to users. The design is fully
+        responsive and will adapt to different screen sizes.
+      </p>
+    </div>
 
-      <div class="gallery">
-        <a  href="gib/done/eindopdracht/home/index.html">
-          <img src="images/olympus.jpg" alt="" width="600" height="400">
-        </img>
-        <div class="desc">gip</div>
-        </a>
-      </div>
-     
+    <script>
+      // Add click functionality to menu items
+      document.querySelectorAll(".menu-item").forEach((item, index) => {
+        item.addEventListener("click", function () {
+          const menuText = this.textContent;
+          alert(
+            `You selected ${menuText}. This could navigate to a ${menuText.toLowerCase()} page.`
+          );
+        });
+      });
+    </script>
   </body>
 </html>
+
