@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videos — Daniela's Portfolio</title>
+<link rel="stylesheet" href="https://use.typekit.net/ygl4jfm.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="banner">
+  <div class="brand">Daniela's Portfolio</div>
+  <div class="tagline">Graphic &amp; Motion Designer</div>
+  <div class="menu-container">
+    <a class="menu-item" href="index.html">Home</a>
+    <a class="menu-item active" href="videos.html">Videos</a>
+    <a class="menu-item" href="design.html">Design</a>
+    <a class="menu-item" href="websites.html">Websites</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="eyebrow">01 — Animation</div>
+  <h1>Videos</h1>
+  <p>My motion work, hosted on YouTube. Click any thumbnail and it plays right here on the page.</p>
+</section>
+
+<section class="section">
+  <div class="video-grid" id="videoGrid"></div>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Daniela</span>
+  <span>you@example.com</span>
+</footer>
+
+<script>
+/* ============================================================
+   ADD YOUR VIDEOS HERE
+   "id" is the YouTube video ID — the part after "v=" in the URL:
+   https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  id is "dQw4w9WgXcQ"
+   ============================================================ */
+const VIDEOS = [
+  { title: "Animation One",   id: "dQw4w9WgXcQ", desc: "Short loop, 2024" },
+  { title: "Animation Two",   id: "dQw4w9WgXcQ", desc: "Title sequence, 2024" },
+  { title: "Animation Three", id: "dQw4w9WgXcQ", desc: "Explainer, 2023" },
+  { title: "Animation Four",  id: "dQw4w9WgXcQ", desc: "Loop study, 2023" },
+];
+
+const videoGrid = document.getElementById('videoGrid');
+VIDEOS.forEach(v => {
+  const card = document.createElement('div');
+  card.className = 'video-card';
+  card.innerHTML = `
+    <div class="video-frame" data-id="${v.id}">
+      <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt="${v.title}" loading="lazy">
+      <div class="play-btn"></div>
+    </div>
+    <div class="video-meta"><h3>${v.title}</h3><p>${v.desc}</p></div>
+  `;
+  videoGrid.appendChild(card);
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
