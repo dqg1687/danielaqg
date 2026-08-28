@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design — Daniela's Portfolio</title>
+<link rel="stylesheet" href="https://use.typekit.net/ygl4jfm.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="banner">
+  <div class="brand">Daniela's Portfolio</div>
+  <div class="tagline">Graphic &amp; Motion Designer</div>
+  <div class="menu-container">
+    <a class="menu-item" href="index.html">Home</a>
+    <a class="menu-item" href="videos.html">Videos</a>
+    <a class="menu-item active" href="design.html">Design</a>
+    <a class="menu-item" href="websites.html">Websites</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="eyebrow">02 — Graphic Design</div>
+  <h1>Design work</h1>
+  <p>Branding, print, and editorial pieces.</p>
+</section>
+
+<section class="section">
+  <div class="work-grid" id="workGrid"></div>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Daniela</span>
+  <span>you@example.com</span>
+</footer>
+
+<script>
+/* ============================================================
+   ADD YOUR DESIGN WORK HERE
+   Put image files in an "images" folder next to this page,
+   then reference them below.
+   ============================================================ */
+const DESIGN_WORK = [
+  { title: "Project One",   tag: "Branding",  img: "images/work-1.jpg" },
+  { title: "Project Two",   tag: "Editorial", img: "images/work-2.jpg" },
+  { title: "Project Three", tag: "Print",     img: "images/work-3.jpg" },
+  { title: "Project Four",  tag: "Packaging", img: "images/work-4.jpg" },
+  { title: "Project Five",  tag: "Branding",  img: "images/work-5.jpg" },
+  { title: "Project Six",   tag: "Poster",    img: "images/work-6.jpg" },
+];
+
+const workGrid = document.getElementById('workGrid');
+DESIGN_WORK.forEach(item => {
+  const card = document.createElement('div');
+  card.className = 'work-card';
+  card.innerHTML = `
+    <div class="thumb"><img src="${item.img}" alt="${item.title}" loading="lazy"></div>
+    <div class="info"><div class="tag">${item.tag}</div><h3>${item.title}</h3></div>
+  `;
+  workGrid.appendChild(card);
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
