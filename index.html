@@ -1,51 +1,90 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://use.typekit.net/ygl4jfm.css" />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daniela's Portfolio</title>
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    <div class="banner">
-      <div class="serene-text">Daniela's Portfolio</div>
-      <div class="menu-container">
-        <div class="menu-item">Menu 1</div>
-        <div class="menu-item">Menu 2</div>
-        <div class="menu-item">Menu 3</div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniela's Portfolio</title>
+<link rel="stylesheet" href="https://use.typekit.net/ygl4jfm.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="banner">
+  <div class="brand">Daniela's Portfolio</div>
+  <div class="tagline">Graphic &amp; Motion Designer</div>
+  <div class="menu-container">
+    <a class="menu-item active" href="index.html">Home</a>
+    <a class="menu-item" href="videos.html">Videos</a>
+    <a class="menu-item" href="design.html">Design</a>
+    <a class="menu-item" href="websites.html">Websites</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="eyebrow">Welcome</div>
+  <h1>Hi, I'm Daniela.</h1>
+  <p>This is a running record of what I make — animation, graphic design, and websites. Pick a section below.</p>
+</section>
+
+<section class="section">
+  <div class="card-grid">
+
+    <a class="big-card" href="videos.html">
+      <div class="num">01</div>
+      <div>
+        <h2>Animations</h2>
+        <p>My motion &amp; animation work, hosted on YouTube — play it right on the page.</p>
       </div>
-    </div>
+      <div class="arrow">View videos</div>
+    </a>
 
-    <div class="content">
-      <h2>About This Design</h2>
-      <p>
-        This banner features a beautiful gradient background with the word
-        "Serene" centered in elegant typography. The menu items are positioned
-        against the banner in the top-right corner, creating a clean and modern
-        design.
-      </p>
-      <p>
-        The menu items have a subtle glassmorphism effect and respond to hover
-        interactions, providing visual feedback to users. The design is fully
-        responsive and will adapt to different screen sizes.daniela u are great
-      </p>
-    </div>
+    <a class="big-card" href="design.html">
+      <div class="num">02</div>
+      <div>
+        <h2>Graphic Design</h2>
+        <p>Branding, print, and editorial work.</p>
+      </div>
+      <div class="arrow">View design</div>
+    </a>
 
-    <script>
-      // Add click functionality to menu items
-      document.querySelectorAll(".menu-item").forEach((item, index) => {
-        item.addEventListener("click", function () {
-          const menuText = this.textContent;
-          alert(
-            `You selected ${menuText}. This could navigate to a ${menuText.toLowerCase()} page.`
-          );
-        });
-      });
-    </script>
-  </body>
+    <a class="big-card" href="websites.html">
+      <div class="num">03</div>
+      <div>
+        <h2>Websites</h2>
+        <p>Sites and web projects I've designed and built.</p>
+      </div>
+      <div class="arrow">View websites</div>
+    </a>
+
+    <!-- Edit these two once you know what goes here — just change
+         the href, the heading, and the description text. -->
+    <a class="big-card muted" href="coming-soon-1.html">
+      <div class="num">04</div>
+      <div>
+        <h2>Coming Soon</h2>
+        <p>Fourth section — not decided yet.</p>
+      </div>
+      <div class="arrow">Learn more</div>
+    </a>
+
+    <a class="big-card muted" href="coming-soon-2.html">
+      <div class="num">05</div>
+      <div>
+        <h2>Coming Soon</h2>
+        <p>Fifth section — not decided yet.</p>
+      </div>
+      <div class="arrow">Learn more</div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Daniela</span>
+  <span>you@example.com</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
-
