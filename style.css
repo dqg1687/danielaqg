@@ -47,7 +47,7 @@ img{max-width:100%; display:block;}
   opacity:.6;
 }
 .banner .brand{
-  font-size:clamp(2.2rem, 5vw, 3.4rem); font-weight:300; color:#fff;
+  font-size:clamp(4.2rem, 5vw, 5.4rem); font-weight:300; color:#fff;
   text-shadow:2px 2px 8px rgba(0,0,0,.3); letter-spacing:3px; z-index:2; text-align:center;
 }
 .banner .tagline{
