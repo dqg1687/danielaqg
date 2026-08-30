@@ -226,8 +226,11 @@ img{max-width:100%; display:block;}
 footer{
   width:90%; max-width:1200px; margin-top:24px; padding:18px 4px;
   font-family:var(--mono); font-size:21px; color:var(--muted); font-weight:400;
-  display:flex; justify-content:space-between;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px 24px;
 }
+footer .footer-contact{display:flex; gap:20px; flex-wrap:wrap;}
+footer .footer-contact a{color:var(--muted); transition:color .15s;}
+footer .footer-contact a:hover{color:var(--accent);}
 
 @media (max-width:768px){
   .banner{min-height:150px; padding-top:70px;}
