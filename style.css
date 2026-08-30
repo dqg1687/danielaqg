@@ -22,9 +22,15 @@
   --mono: 'IBM Plex Mono', 'Courier New', monospace;
   --sans: "tangier", 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --display: "dreamboat", "tangier", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 *{box-sizing:border-box; margin:0; padding:0; font-family:var(--sans); font-weight:800; font-style:normal;}
+
+/* Paragraph text: plain sans-serif, not the display/brand font */
+p{
+  font-family:var(--body);
+}
 
 /* Big titles only — paragraphs, nav, labels, and captions keep --sans */
 .banner .brand,
