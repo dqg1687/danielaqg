@@ -13,13 +13,11 @@
   <div class="brand">Daniela's Portfolio</div>
   <div class="tagline">Graphic &amp; Motion Designer</div>
   <div class="menu-container">
-    <a class="menu-item" href="index.html">Home</a> 
-    <a class="menu-item" href="over.html">Over mij </a>
+    <a class="menu-item" href="index.html">Home</a>
     <a class="menu-item" href="animation.html">Animation</a>
     <a class="menu-item" href="design.html">Design</a>
     <a class="menu-item active" href="websites.html">Websites</a>
-    <a class="menu-item" href="mock.html">Mock-ups</a>
-   
+    <a class="menu-item" href="over.html">About Me</a>
   </div>
 </div>
 
@@ -41,17 +39,61 @@
 <script>
 /* ============================================================
    ADD YOUR WEBSITE PROJECTS HERE
-   "img" is a screenshot of the site — put it in the "images" folder.
-   "url" is the live link (opens in a new tab).
+   Two kinds of cards:
+
+   1) "link" — a jpg that opens another website in a new tab.
+      "img" is a screenshot, put it in the "images" folder.
+      "url" is the live link.
+
+   2) "video" — a YouTube thumbnail that plays inline, right on
+      this page, exactly like on the Animation page.
+      "id" is the YouTube video ID — the part after "v=" in the URL.
    ============================================================ */
 const SITES = [
-  { title: "Site One",   tag: "Portfolio",  img: "images/site-1.jpg", url: "https://example.com", desc: "Short one-line description of the project." },
-  { title: "Site Two",   tag: "Small Biz",  img: "images/site-2.jpg", url: "https://example.com", desc: "Short one-line description of the project." },
-  { title: "Site Three", tag: "Landing Page", img: "images/site-3.jpg", url: "https://example.com", desc: "Short one-line description of the project." },
+  {
+    type: "link",
+    title: "UX Skills — EK2",
+    tag: "Figma",
+    img: "homepage_danielaQG_UX_EK2.png",
+    url: "https://www.figma.com/design/HRKQkainjTgCf9PoAFjX97/Daniela-Quintero-Goyes---UX-Skills-EK2?node-id=29-2&p=f&t=0SzR40zpeyEbmcpT-0",
+    desc: "Website design , UX skills"
+  },
+  {
+    type: "link",
+    title: "Quintero — Kunstkaai",
+    tag: "Website",
+    img: "Screenshot 2026-08-30 233443.png",
+    url: "https://quintero.kunstkaai.online/",
+    desc: "Middelbaar eindwerk"
+  },
+  {
+    type: "video",
+    title: "Site Walkthrough",
+    tag: "YouTube",
+    id: "9lFU63dCTes",
+    desc: "Website opdrachten van het Middelbaar"
+  },
 ];
 
 const siteGrid = document.getElementById('siteGrid');
 SITES.forEach(s => {
+  if (s.type === 'video') {
+    // Same markup/behaviour as the Animation page — script.js
+    // already has the click-to-play logic for .video-frame.
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.innerHTML = `
+      <div class="video-frame" data-id="${s.id}">
+        <img src="https://img.youtube.com/vi/${s.id}/hqdefault.jpg" alt="${s.title}" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+      <div class="video-meta"><h3>${s.title}</h3><p>${s.desc}</p></div>
+    `;
+    siteGrid.appendChild(card);
+    return;
+  }
+
+  // Default: a jpg that opens an outside link in a new tab.
   const card = document.createElement('a');
   card.className = 'site-card';
   card.href = s.url;
